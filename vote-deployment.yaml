@@ -5,6 +5,14 @@ metadata:
   labels:
     app: vote
 spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  revisionHistoryLimit: 10
+  minReadySeconds: 10
   selector:
     matchLabels:
       app: vote
@@ -25,5 +33,16 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
-
-
+          name: vote
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
