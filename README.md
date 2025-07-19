@@ -13,6 +13,9 @@ The app consists of 5 components:
 - `redis` – In-memory data store used as a queue
 - `db` – PostgreSQL database for storing vote results
 
+## 📸 Diagram 
+![Architecture](voting_app_svg_diagram.png)
+
 ## 📦 Directory Structure
 
 ```bash
@@ -26,7 +29,6 @@ The app consists of 5 components:
 │   ├── result-service.yaml
 │   ├── redis-service.yaml
 │   ├── postgres-service.yaml
-│   └── ingress.yaml (optional)
 │   └── 
 ├── README.md
 ```
@@ -58,7 +60,7 @@ The app consists of 5 components:
    - If using Ingress:  
      Ensure DNS and ingress controller are configured.
 
-## 📸 Screenshots
+
 
 
 ## 📚 Resources
