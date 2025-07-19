@@ -19,17 +19,17 @@ spec:
         image: postgres:alpine
         env:
         - name: POSTGRES_DB
-          valuefrom:
+          valueFrom:
             secretKeyRef:
               name: postgres-secrets
               key: POSTGRES_DB
         - name: POSTGRES_USER
-          valuefrom:
+          valueFrom:
             secretKeyRef:
               name: postgres-secrets
               key: POSTGRES_USER
         - name: POSTGRES_PASSWORD
-          valuefrom:
+          valueFrom:
             secretKeyRef:
               name: postgres-secrets
               key: POSTGRES_PASSWORD
