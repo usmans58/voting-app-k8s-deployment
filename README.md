@@ -14,7 +14,7 @@ The app consists of 5 components:
 - `db` – PostgreSQL database for storing vote results
 
 ## 📸 Diagram 
-![Architecture](voting_app_svg_diagram.png)
+![Architecture](voting_app_svg_diagram.jpg)
 
 ## 📦 Directory Structure
 
